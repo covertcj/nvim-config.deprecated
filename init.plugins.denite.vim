@@ -30,12 +30,13 @@ function! MyDeniteFileHere()
     execute ':Denite file "'.root."'"
 endfunction
 
-map <c-p> :Denite file/rec<CR>
-map <leader>dp :Denite file/rec<CR>
-map <leader>dr :Denite file<CR>
-map <leader>df :call DeniteFileHere()<CR>
-map <leader>dg :Denite grep<CR>
-map <leader>dl :Denite line<CR>
-map <leader>db :Denite buffer<CR>
-map <leader>dr :Denite register<CR>
+noremap  <c-p>      :Denite file/rec<CR>
+nnoremap <leader>dp :Denite file/rec<CR>
+nnoremap <leader>dr :Denite file<CR>
+nnoremap <leader>df :call DeniteFileHere()<CR>
+nnoremap <leader>dg :Denite grep<CR>
+nnoremap <leader>dl :Denite line<CR>
+noremap  <c-b>      :Denite buffer<CR>
+nnoremap <leader>db :Denite buffer<CR>
+nnoremap <leader>dr :Denite register<CR>
 
