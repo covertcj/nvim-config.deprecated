@@ -14,7 +14,8 @@ Plug 'sebastianmarkow/deoplete-rust'
 
 
 call plug#end()
-"if !isdirectory(my_plug_home)
+if isdirectory(my_plug_home)
+    let g:my_plugins_detected=1
 "    PlugInstall
-"endif
+endif
 
