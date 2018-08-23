@@ -1,3 +1,5 @@
+let mapleader=","
+
 let g:my_config_dir = fnamemodify($MYVIMRC, ":p:h")
 
 let g:my_plugins_detected = 0
