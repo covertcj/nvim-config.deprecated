@@ -1,4 +1,5 @@
 set termguicolors
+set number relativenumber
 
 try
     colorscheme challenger_deep
