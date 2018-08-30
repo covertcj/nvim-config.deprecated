@@ -32,8 +32,8 @@ endfunction
 
 noremap  <c-p>      :Denite file/rec<CR>
 nnoremap <leader>dp :Denite file/rec<CR>
-nnoremap <leader>dr :Denite file<CR>
-nnoremap <leader>df :call DeniteFileHere()<CR>
+nnoremap <leader>dd :Denite file<CR>
+nnoremap <leader>df :call MyDeniteFileHere()<CR>
 nnoremap <leader>dg :Denite grep<CR>
 nnoremap <leader>dl :Denite line<CR>
 noremap  <c-b>      :Denite buffer<CR>
