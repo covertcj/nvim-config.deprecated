@@ -23,6 +23,10 @@ Plug 't9md/vim-choosewin'
 """" language support
 Plug 'sebastianmarkow/deoplete-rust'
 
+" TypeScript
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'HerringtonDarkholme/deoplete-typescript', { 'do': ':UpdateRemotePlugins', 'commit': 'dec62bfee61b4e371b1a9892cf1bcc99e6144100' }
+
 " vimL
 Plug 'Shougo/neco-vim'
 
