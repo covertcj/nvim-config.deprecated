@@ -12,23 +12,35 @@ Plug 'covertcj/vim-schemer'
 
 """"""""""""
 """" general
-Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'neomake/neomake'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'} " Conquer of Completion
+inoremap <silent><expr> <c-space> coc#refresh()
+nmap <silent> [c <Plug>(coc-diagnostic-prev)
+nmap <silent> ]c <Plug>(coc-diagnostic-next)
+
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
 Plug 'editorconfig/editorconfig-vim'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 't9md/vim-choosewin'
+"Plug 't9md/vim-choosewin'
 
 
 """""""""""""""""""""
 """" language support
-Plug 'sebastianmarkow/deoplete-rust'
-
-" TypeScript
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'HerringtonDarkholme/deoplete-typescript', { 'do': ':UpdateRemotePlugins', 'commit': 'dec62bfee61b4e371b1a9892cf1bcc99e6144100' }
 
 " vimL
 Plug 'Shougo/neco-vim'
+
+Plug 'HerringtonDarkholme/yats.vim'
 
 
 call plug#end()
